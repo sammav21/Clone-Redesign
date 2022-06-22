@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+
+header, footer{
+    display: flex;
+    justify-content: space-between;
+    
+}
+header{
+    width: 100%;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    margin: 10px 15px 0px;
+    z-index: 1;
+}
+#logo{
+height: 50px;
+}
+
+#nav{
+    display: flex;
+    list-style: none;
+    margin-right: 3%;  
+    
+}
+.navItems{
+    color: #131313;
+}
+
+.navItems:hover{
+    color: #ed1c24;
+    padding: 5px;
+    border: #F5DBCB 2px solid;
+    border-radius: 20px;
+    background-color: #F5DBCB;
+}
+li{
+    padding: 10px;
+    font-family: 'Staatliches', cursive;
+    
+}
+
+#main{
+    height: 70vh;
+    display: flex;
+    justify-content: space-between;
+    background-color: #F5DBCB;
+}
+
+#slogan{
+    width: 30%;
+    margin: auto;
+    position: relative;
+    font-family: 'Staatliches', cursive;
+    color: #ed1c24;
+}
+
+#text1{
+    font-size: 20px;
+    font-family: 'Voltaire', sans-serif;
+    text-shadow: white -2px 0px;
+    
+    
+}
+#text2{
+    font-size: 50px;
+    text-shadow: white -4px 0px;
+    border-bottom: dashed white 20px;
+    
+    
+}
+#burger{
+    object-fit:cover;
+    object-position: 30px -230px; /*have to change this when making responsive design*/
+    height: 600px;
+    width: 600px;
+    float: center;
+}
+
+#arrowDiv{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: #F5DBCB;
+}
+#arrow{
+    color: #F5DBCB;
+    padding: 5px;
+    border: #F5DBCB 3px solid;
+    border-radius: 50px;
+}
+
+#story{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 120px 100px;
+    color: #ed1c24;
+    background-color:#fffaf0;
+}
+h2{
+    font-size: 40px;
+    font-family: 'Staatliches', cursive;
+}
+
+#storytext{
+    font-family: 'Voltaire', sans-serif;
+    font-size: 20px;
+}
+footer{
+    height: 23vh;
+    padding: 0 15px;
+    background-color: #ed1c24;
+    align-items: center;
+    color: white;
+    font-family: 'Staatliches', cursive;
+    overflow: hidden;
+}
+
+#socials{
+    font-size: 25px;  
+}
+h3{
+    font-size: 25px;
+}
+address{
+    font-size: 15px;
+}
+.icons{
+    color: white;
+    padding: 5px;
+}
+ #contact{
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+ }
+ .icons2{
+    color: white;
+}
+
+.employment{
+    cursor: pointer;
+}
+.popupInfo{
+    visibility: hidden;
+    position: absolute;
+    height: auto;
+    width: auto;
+    font-size: 17px;
+    background-color: #F5DBCB;
+    border: #ed1c24 3px solid;
+    border-radius: 15px;
+    color: #ed1c24;
+    font-family: 'Voltaire', sans-serif;
+}
+#x{
+    cursor: pointer;
+    float: right;
+    font-size: 20px;
+    color: #fffaf0;
+    border: none;
+    background-color: #F5DBCB;
+}
+#download{
+    font-size: 18px;
+    color: #fffaf0;
+    padding: 2px;
+    border: solid #fffaf0 3px;
+    border-radius: 7px;
+}
+
+#download:hover{
+    color: #F5DBCB;
+    background-color: #fffaf0;
+}
+.show {
+    visibility: visible;
+    position: fixed;
+    width: 30vw;
+    height: auto;
+    text-align: center;
+    padding: 10px;
+    left: 69%;
+    bottom: 100px;
+    z-index: 1;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+  }
+
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+
+/*menu page*/
+#title {
+    margin: 30px 30px 0px;
+    text-align: center;
+    font-family: 'Staatliches', cursive;
+    text-decoration: underline;
+    font-size: 10vw;
+    background-color: #fffaf0;
+}
+#menu{
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Voltaire', sans-serif;
+    padding-top: 50px;
+    color: #131313;
+    background-color: #fffaf0;
+    margin: 0px 30px 0;
+    border-radius: 10px;
+}
+
+#extraInfo{  
+    font-family: 'Voltaire', sans-serif;
+    text-align: center;
+    color: #131313;
+    background-color: #fffaf0;
+    margin: 0px 30px 30px;
+    border-radius: 10px;
+}
+
+.section{    
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   border-bottom: solid 10px #131313;
+   margin-bottom: 50px;
+}
+.sectionAlt{
+    width: 100%;
+    margin: auto;
+}
+.sectionTitle{
+    font-size: 5.5vw;
+    padding-bottom: 20px;
+}
+.sectionTitleAlt{
+    font-size: 5.5vw;
+}
+
+.itemContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.item{
+    font-size: 3.3vw;
+}
+.description{
+    font-size: 2vw;
+}
+.descriptionAlt{
+    font-size:1.5vw;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
