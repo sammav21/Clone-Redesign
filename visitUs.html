@@ -21,27 +21,24 @@
             <li><a class="navItems" href='gallery.html'>Gallery</a></li>
         </ul> 
     </header>
-    <div id="main">
-        <div id="slogan">
-        <p id="text1"> Our concept is simple:</p>
-        <p id="text2"> BUILD IT YOUR WAY</p>
+
+    <main id="visitUsContainer">
+        
+        <div id="hours">
+            <h2 class="visitUsTitle">Hours</h2>
+            <h4 id="visitUsDetail">Monday - Sunday</h4><br>
+            <p id="hoursDescription">Food Available from 11:00 AM - 10:30 PM <br>Yogurt Available from 11:00 AM - 11:00 PM
+            </p>
+            <p id="call">Call to order<br><a id='call2' href="tel:718-708-6828"><i class="fa-solid fa-phone"></i> 718-708-6828</a></p>
         </div>
-        <img id="burger" src="Pics/Alex3_edit.png">
-    </div>
-    <div id="arrowDiv"><a href='#story' id="arrow"><i class="fa-solid fa-angles-down"></i></a></div>
-    <div id="story">
-        <h2>Our Story</h2>
-        <br>
-        <p id="storytext">
-            The Yo-Burger concept was first born on a vacation trip to California. With the abundance of fast burger restaurants on the West Coast, many days were spent indulging in delicious, juicy burgers while enjoying the sunshine. We quickly noticed a pattern though in our behavior… we craved the cool, natural flavor of frozen yogurt to wash it down. After returning to New York City, we continued to search for burgers followed by frozen yogurt. The Yo-Burger experience was officially born.
-            <br>
-            <br>
-            Yo-Burger is committed to providing the highest quality products on the market. Our Black Angus beef is provided fresh daily, and all burgers are made to order with your choice of toppings. All of our frozen yogurt is non-fat or low-fat and made with all natural ingredients. Our yogurt is filled with live and active yogurt cultures which help maintain healthy digestive and immune systems. Our yogurt is also a good source of calcium which helps support strong bones. All of our yogurt is certified kosher.
-            <br>
-            <br>
-            Our concept is simple: Build it Your Way
-        </p>
-    </div>
+        <div id="location">
+            <h2 class="visitUsTitle">Location</h2>
+            <h4 id="visitUsDetail">3726 Riverdale Avenue<br> Bronx, NY 10463</h4><br>
+            <div id="map"></div>
+        </div>
+        
+    </main>
+    
     <footer>
         <div id="socials">
             <a class='icons' href="https://www.facebook.com/Yo-Burger-249401645148840/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
@@ -61,9 +58,19 @@
         </div>
         <span class="popupInfo" id="popup"><button id="x"><i class="fa-solid fa-square-xmark"></i></button><br>Yo-Burger is an equal opportunity employer. Please click on the application below and fax it back to us at 718.708.6826 or bring it in person to our Riverdale location. <br><br> <a href="Scan_Doc0002.pdf" download="YoBurger Application" id="download">Job Application</a> </span>
     </footer>
-
-
     <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
-</body>
-</html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var map;
+        const yoBurger = {lat: 40.887475682364105, lng: -73.90697714658948};
+        function initMap() {
+          map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 17,
+            center: yoBurger,
+          });
+        }
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCr5THh6YliWqDGhBaSpSnTKTrLh78fJcE&callback=initMap"
+      async defer></script> 
+    </body>
+    </html>

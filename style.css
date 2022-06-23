@@ -6,6 +6,12 @@
 html{
     scroll-behavior: smooth;
 }
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 a{
     text-decoration: none;
 }
@@ -21,9 +27,10 @@ header{
     position: sticky;
     top: 0;
     align-items: center;
-    margin: 10px 15px 0px;
+    padding: 10px 15px 0px;
     z-index: 1;
 }
+
 #logo{
 height: 50px;
 }
@@ -130,6 +137,7 @@ footer{
     color: white;
     font-family: 'Staatliches', cursive;
     overflow: hidden;
+    margin-top: auto;
 }
 
 #socials{
@@ -222,6 +230,7 @@ address{
     text-decoration: underline;
     font-size: 10vw;
     background-color: #fffaf0;
+    box-shadow: 0px 30px 30px 0px #F5DBCB;
 }
 #menu{
     display: flex;
@@ -230,8 +239,9 @@ address{
     padding-top: 50px;
     color: #131313;
     background-color: #fffaf0;
+    box-shadow: 0px 30px 30px 0px #F5DBCB;
     margin: 0px 30px 0;
-    border-radius: 10px;
+    
 }
 
 #extraInfo{  
@@ -239,8 +249,9 @@ address{
     text-align: center;
     color: #131313;
     background-color: #fffaf0;
+    box-shadow: 0px 20px 30px 0px #F5DBCB;
     margin: 0px 30px 30px;
-    border-radius: 10px;
+    
 }
 
 .section{    
@@ -279,3 +290,69 @@ address{
     margin-bottom: 30px;
     padding-bottom: 30px;
 }
+
+#visitUsContainer{
+    width: 95%;
+    display: flex;
+    justify-content:space-around;
+    align-items: flex-start;
+    margin: auto;
+    
+    padding: 20px 0px;
+    background-color: #fffaf0;
+    box-shadow: 0px 20px 30px 0px #F5DBCB;
+}
+
+#hours, #location{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Voltaire', sans-serif;
+    width: 100%;
+    text-align: center;
+}
+.visitUsTitle{
+    text-decoration: underline;
+}
+#hoursDescription{
+    padding-top: 100px;
+    font-size: 2vw;
+}
+#call{
+padding-top: 150px;
+}
+#call2{
+    color: #131313;
+}
+#map{
+    width: 40vw;
+    height: 300px;
+    margin-bottom: 20px;
+    border: 10px solid #F5DBCB;
+    border-radius: 20px;
+    box-shadow: 10px 10px #ed1c24;
+}
+
+#galleryContainer{
+    width: 85%;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fffaf0;
+    box-shadow: 0px 20px 30px 0px #F5DBCB;
+    border-radius: 5px;
+}
+#grid{
+    width: 100%;
+    height: 50vh;
+    
+    display: grid;
+    grid-template-columns: repeat(3, 10fr);
+    grid-template-rows: repeat(8, 15vw);
+    grid-gap: 10px;
+
+}
+
