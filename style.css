@@ -7,6 +7,18 @@ html{
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar{
+    width: 3px;
+}
+::-webkit-scrollbar-track {
+    background: #fffaf0;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ed1c24;
+  }
+  
 body{
     min-height: 100vh;
     display: flex;
@@ -16,10 +28,9 @@ a{
     text-decoration: none;
 }
 
-header, footer{
+header, footer {
     display: flex;
-    justify-content: space-between;
-    
+    justify-content: space-between;   
 }
 header{
     width: 100%;
@@ -38,8 +49,7 @@ height: 50px;
 #nav{
     display: flex;
     list-style: none;
-    margin-right: 3%;  
-    
+    margin-right: 3%;      
 }
 .navItems{
     color: #131313;
@@ -57,41 +67,42 @@ li{
     font-family: 'Staatliches', cursive;
     
 }
-
+.dropdown{
+    display: none;
+}
 #main{
     height: 70vh;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: #F5DBCB;
 }
 
 #slogan{
-    width: 30%;
-    margin: auto;
+    width: 50%;
+    padding-left: 30px;
     position: relative;
     font-family: 'Staatliches', cursive;
     color: #ed1c24;
 }
 
 #text1{
-    font-size: 20px;
+    font-size: 3vw;
     font-family: 'Voltaire', sans-serif;
     text-shadow: white -2px 0px;
     
     
 }
 #text2{
-    font-size: 50px;
+    font-size: 7vw;
     text-shadow: white -4px 0px;
-    border-bottom: dashed white 20px;
-    
-    
+    border-bottom: dashed white 20px; 
 }
 #burger{
     object-fit:cover;
-    object-position: 30px -230px; /*have to change this when making responsive design*/
-    height: 600px;
-    width: 600px;
+    object-position: 10% 30px 120px; /*have to change this when making responsive design*/
+    height: auto;
+    width: 58%;
     float: center;
 }
 
@@ -121,13 +132,13 @@ li{
     background-color:#fffaf0;
 }
 h2{
-    font-size: 40px;
+    font-size: 5vw;
     font-family: 'Staatliches', cursive;
 }
 
 #storytext{
     font-family: 'Voltaire', sans-serif;
-    font-size: 20px;
+    font-size: 2.1vw;
 }
 footer{
     height: 23vh;
@@ -297,7 +308,6 @@ address{
     justify-content:space-around;
     align-items: flex-start;
     margin: auto;
-    
     padding: 20px 0px;
     background-color: #fffaf0;
     box-shadow: 0px 20px 30px 0px #F5DBCB;
@@ -318,11 +328,20 @@ address{
     padding-top: 100px;
     font-size: 2vw;
 }
-#call{
+
+#callContainer{
 padding-top: 150px;
+font-size: 3vw;
+}
+#call{
+    margin-bottom: 5px; 
 }
 #call2{
-    color: #131313;
+    color: #ed1c24;
+    padding: 4px;
+    border: 1px solid #F5DBCB;
+    border-radius: 10px;
+    background-color: #F5DBCB;
 }
 #map{
     width: 40vw;
@@ -353,6 +372,168 @@ padding-top: 150px;
     grid-template-columns: repeat(3, 10fr);
     grid-template-rows: repeat(8, 15vw);
     grid-gap: 10px;
-
 }
+
+@media (min-width:10px) and (max-width:480px){
+ 
+    #nav{
+        display: none;
+    }
+    .dropdown{
+        display:flex;
+        flex-direction: column;
+        align-items: flex-end;
+        font-family: 'Staatliches', cursive;
+    }
+    .btn{
+        background-color: transparent;
+        border: none;
+        font-size: 20px;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    .btn-active{
+        background-color: #F5DBCB;
+        color: #ed1c24;
+    }
+    .dropdown-menu{
+        position: absolute;
+        top: 80%;
+        visibility:hidden;
+    }
+    .visible{
+        display:flex;
+        flex-direction: column;
+        transition: all 0.3s ease .1s;
+        position: absolute;
+        top: 90%;
+        visibility:visible;
+        list-style: none;
+        z-index: 1;
+        background-color: #fffaf0;
+        box-shadow: 0px 5px 20px 1px #F5DBCB ;
+        border-radius: 5px;
+    }
+    .dropdown-item{
+        padding: 15px;
+        color: #131313;  
+    }
+    .dropdown-item:active{
+        color: #ed1c24;
+        text-decoration: underline;
+    }
+
+    #main{
+        height: 70vh;
+        flex-direction: column;
+    }
+    
+    #slogan{
+        width: 85%;
+        padding-left: 0px;
+        padding-top: 60px;
+    }
+    
+    #text1{
+        font-size: 7vw;
+    }
+    #text2{
+        font-size: 13vw; 
+        margin-bottom: 60px;
+    }
+    #burger{
+        object-position: 0px -100px; /*have to change this when making responsive design*/
+        width: 100vw;
+        
+    }
+
+    #arrowDiv{
+        padding: 80px;
+    }
+
+    #story{
+        padding: 30px 20px;
+    }
+    h2{
+        font-size: 10vw;
+    }
+    
+    #storytext{
+        font-size: 4vw;
+    }
+
+    .show {
+        width: 70vw;
+        left: 29%;
+        bottom: 130px;
+      }
+
+      #title {
+        font-size: 17vw;
+      }
+      #menu{
+        flex-direction: column;
+      }
+      #extraInfo{
+        padding: 0 30px;
+      }
+
+      .section{    
+        margin: 0px 30px 50px;
+     }
+
+     .sectionTitle{
+         font-size: 11vw;
+     }
+     .sectionTitleAlt{
+         font-size: 11vw;
+     }
+     
+     .item{
+         font-size: 6vw;
+     }
+     .description{
+         font-size: 4.5vw;
+     }
+     .descriptionAlt{
+         font-size:4vw;
+         margin-bottom: 30px;
+         padding-bottom: 30px;
+     }
+
+     #visitUsContainer{
+        flex-direction: column;
+        margin: 30px 10px;
+        padding: 20px 0px;
+    }
+
+    .visitUsTitle{
+        text-decoration: underline;
+        font-size: 14vw;
+        padding-bottom: 5px;
+    }
+    #hoursDescription{
+        padding-top: 10px;
+        font-size: 5vw;
+    }
+
+    #callContainer{
+        padding: 40px 0px 30px;
+        margin-bottom: 30px;
+        font-size: 7vw;
+        }
+
+        #call{
+            margin-bottom: 5px; 
+        }
+   
+    #map{
+        width: 93vw;
+        height: 300px;
+        border: none;
+        box-shadow: 0px 2px 10px 5px #F5DBCB;
+    }
+    
+}
+
 
